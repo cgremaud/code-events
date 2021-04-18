@@ -5,13 +5,13 @@
     <title th:text = "${title}"></title>
 </head>
 <body>
-<h1>All Events</h1>
+
 <p th:unless = "${events.size()}">No events yet!</p>
   <ul>
     <th:block th:each = "event : ${events}">
       <li th:text = "${event}">Event</li>
     </th:block>
   </ul>
-  <a href = "create">Create Event</a>
+  <a href = "create">Create Event</a> <!-- TODO this is causing some issues. Sends it to /events/events/create after adding the first event -->
 </body>
 </html>

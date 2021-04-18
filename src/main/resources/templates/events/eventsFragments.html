@@ -2,10 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title th:text = "${title}"></title>
+    <title>Title</title>
 </head>
 <body>
-    <p th:replace = "fragments :: styledHeader"></p>
-    <a href = "events">Events</a>
+  <h1 th:fragment = "styledHeader" class = "fancyTitle" th:text = "${title}"></h1>
 </body>
 </html>

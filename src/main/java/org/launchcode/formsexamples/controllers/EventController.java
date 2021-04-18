@@ -18,6 +18,7 @@ public class EventController {
 
     @GetMapping
     public String displayAllEvents(Model model){
+        model.addAttribute("title", title);
         model.addAttribute("events", events);
         return "events/index";
     }
