@@ -2,13 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text = "${title}"></title>
 </head>
 <body>
+<h1>All Events</h1>
+<p th:unless = "${events.size()}">No events yet!</p>
   <ul>
     <th:block th:each = "event : ${events}">
       <li th:text = "${event}">Event</li>
     </th:block>
   </ul>
+  <a href = "create">Create Event</a>
 </body>
 </html>
